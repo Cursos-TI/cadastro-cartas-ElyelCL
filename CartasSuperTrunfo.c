@@ -16,6 +16,8 @@ int main() {
   float area1;
   float pib1;
   int pontosTuristicos1;
+  float densidadePopulacional1;
+  float pibPerCapita1;
 
   //Declaração de variáveis para a Carta 2
   char estado2;
@@ -25,6 +27,8 @@ int main() {
   float area2;
   float pib2;
   int pontosTuristicos2;
+  float densidadePopulacional2;
+  float pibPerCapita2;
 
   // Área para entrada de dados
   //CADASTRO DA CARTA 1
@@ -50,9 +54,15 @@ int main() {
   printf("Digite o numero de pontos turisticos: ");
   scanf("%d", &pontosTuristicos1);
 
+  // Calcula a densidade populacional
+  densidadePopulacional1 = (float)populacao1 / area1;
+
+  // Calcula o PIB per capita
+  pibPerCapita1 = (float)pib1 / populacao1;
+
   printf("\n");
 
-    //CADASTRO DA CARTA 2
+  //CADASTRO DA CARTA 2
   printf("---- Cadastro da Carta 2 ----\n");
   printf ("Digite o estado (A a H): ");
   scanf("%c", &estado2);
@@ -75,9 +85,15 @@ int main() {
   printf("Digite o numero de pontos turisticos: ");
   scanf("%d", &pontosTuristicos2);
 
+  // Calcula a densidade populacional
+  densidadePopulacional2 = (float)populacao2 / area2;
+
+  // Calcula o PIB per capita
+    pibPerCapita2 = (float)pib2 / populacao2;
+
   printf("\n");
 
-   // ---- IRFORMAÇÕES DA CARTA 1 ----
+  // ---- IRFORMAÇÕES DA CARTA 1 ----
   printf("---- Iformacoes da Carta 1 ----\n");
   printf("Estado: %c\n", estado1);
   printf("Codigo: %s\n", codigoCarta1);
@@ -85,6 +101,8 @@ int main() {
   printf("Populacao: %d\n", populacao1);
   printf("Area: %.2f km2\n", area1);
   printf("Numero de pontos Turisticos: %d\n", pontosTuristicos1);
+  printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+  printf("PIB per Capita: R$ %.2f\n", pibPerCapita1);
 
   printf("\n");
 
@@ -96,6 +114,8 @@ int main() {
   printf("Populacao: %d\n", populacao2);
   printf("Area: %.2f km2\n", area2);
   printf("Numero de pontos Turisticos: %d\n", pontosTuristicos2);
+  printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+  printf("PIB per Capita: R$ %.2f\n", pibPerCapita2);
 
     
 return 0;
